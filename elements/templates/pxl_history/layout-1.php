@@ -4,6 +4,7 @@ $default_settings = [
 ];
 $settings = array_merge($default_settings, $settings);
 extract($settings);
+$count = 0;
 ?>
 
 <?php if (isset($history_items) && !empty($history_items) && count($history_items)) : ?>
@@ -46,10 +47,21 @@ extract($settings);
                     }
                 }
                 $link_attributes = $widget->get_render_attribute_string($link_key);
+                $animate_cls = ' pxl-animate pxl-invisible animated-normal';
             ?>
                 <div class="item-wrap elementor-repeater-item-<?php echo esc_attr($value['_id']); ?>">
                     <div class="item-inner relative">
-                        <div class="item-info">
+                        <?php
+                            if ($count % 2 == 0) $animation = 'slideInRight';
+                            else $animation = 'slideInLeft';
+
+                            $data_animation =  json_encode([
+                                'animation'      => $animation,
+                                'animation_delay' => 0
+                            ]);
+                            $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
+                        ?>
+                        <div class="item-info <?php echo esc_attr($animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
                             <?php if (!empty($year)) : ?>
                                 <div class="item-year">
                                     <span><?php echo esc_html($year); ?></span>
@@ -71,7 +83,18 @@ extract($settings);
                                 <div class="dot"></div>
                             </div>
                         </div>
-                        <div class="item-image-wrap">
+                        <?php
+                            if ($count % 2 == 0) $animation = 'slideInLeft';
+                            else $animation = 'slideInRight';
+                            $count++;
+
+                            $data_animation =  json_encode([
+                                'animation'      => $animation,
+                                'animation_delay' => 0
+                            ]);
+                            $data_settings = 'data-settings="' . esc_attr($data_animation) . '"';
+                        ?>
+                        <div class="item-image-wrap <?php echo esc_attr($animate_cls); ?>" <?php pxl_print_html($data_settings); ?>>
                             <?php if (!empty($thumbnail1)) : ?>
                                 <div class="item-image">
                                     <?php if (!empty($image_link['url'])) echo '<a ' . $link_attributes . '>';
