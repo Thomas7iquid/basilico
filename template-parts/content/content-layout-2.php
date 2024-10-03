@@ -51,9 +51,7 @@ $theme_style = basilico()->get_theme_opt('theme_style', 'default');
                         <div class="link-icon">
                             <a href="<?php echo esc_url($link_url); ?>"><span class="pxli-link"></span></a>
                         </div>
-                        <div class="link-text">
-                            <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
-                        </div>
+                        <a class="link-text" target="_blank" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_text); ?></a>
                         <?php if (!empty($link_cite)) : ?>
                             <div class="pxl-divider"></div>
                             <p class="link-cite">
@@ -76,7 +74,7 @@ $theme_style = basilico()->get_theme_opt('theme_style', 'default');
                     ?>
                         <div class="pxl-media-popup">
                             <div class="content-inner">
-                                <a class="media-play-button video-default" href="<?php echo esc_url($featured_video); ?>">
+                                <a class="media-play-button media-default" href="<?php echo esc_url($featured_video); ?>">
                                     <i class="pxli-play-2 pxl-icon-outline"></i>
                                 </a>
                             </div>
@@ -97,7 +95,7 @@ $theme_style = basilico()->get_theme_opt('theme_style', 'default');
                     if ($filetype == 'audio/mpeg') { ?>
                         <div class="pxl-media-popup">
                             <div class="content-inner">
-                                <a class="media-play-button video-default" href="<?php echo esc_url($audio_url); ?>">
+                                <a class="media-play-button media-default" href="<?php echo esc_url($audio_url); ?>">
                                     <i class="pxli-volume"></i>
                                 </a>
                             </div>

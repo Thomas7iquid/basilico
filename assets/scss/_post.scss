@@ -959,30 +959,6 @@
 	}
 }
 
-.pxl-shop-layout-6 .social-share {
-	.d-flex {
-		margin-left: -2px;
-		margin-right: -2px;
-		> * {
-			margin-left: 2px;
-			margin-right: 2px;
-		}
-	}
-	.pxl-icon {
-		border: none;
-		color: $secondary_color;
-		width: 42px;
-		height: 42px;
-		font-size: 15px;
-		&:after {
-			background-color: $primary_color;
-		}
-		&:hover {
-			color: #fff;
-		}
-	}
-}
-
 
 .hover-share{
 	display: inline-flex;

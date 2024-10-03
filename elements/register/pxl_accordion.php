@@ -29,7 +29,6 @@ pxl_add_custom_widget(
                                 'style5' => esc_html__( 'Style 5', 'basilico' ),
                                 'style6' => esc_html__( 'Style 6', 'basilico' ),
                                 'style7' => esc_html__( 'Style 7', 'basilico' ),
-                                'style8' => esc_html__( 'Style 8', 'basilico' ),
                             ],
                             'default' => 'style1',
                         ),
@@ -81,23 +80,6 @@ pxl_add_custom_widget(
                                         'ac_content_type' => 'template'
                                     ],
                                 ),
-                                array(
-                                    'name' => 'background_color',
-                                    'label' => esc_html__('Background Color', 'basilico' ),
-                                    'type' => \Elementor\Controls_Manager::COLOR,
-                                    'selectors' => [
-                                        '{{WRAPPER}} .pxl-accordion.style8 {{CURRENT_ITEM}} .pxl-ac-title' => 'background-color: {{VALUE}};',
-                                    ],
-                                ),
-                                array(
-                                    'name' => 'background_color_active',
-                                    'label' => esc_html__('Background Color Active', 'basilico' ),
-                                    'type' => \Elementor\Controls_Manager::COLOR,
-                                    'description' => esc_html__('Background Use for Style 8', 'basilico'),
-                                    'selectors' => [
-                                        '{{WRAPPER}} .pxl-accordion.style8 {{CURRENT_ITEM}} .pxl-ac-title.active' => 'background-color: {{VALUE}};',
-                                    ],
-                                ),
                             ),
                             'default' => [
                                 [
@@ -130,17 +112,6 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
-                                'name' => 'title_color_active',
-                                'label' => esc_html__('Title Color Active', 'basilico' ),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-title.active' => 'color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'style' => 'style8'
-                                ]
-                            ),
-                            array(
                                 'name' => 'title_typography',
                                 'label' => esc_html__('Title Typography', 'basilico' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
@@ -154,19 +125,13 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-desc' => 'color: {{VALUE}};',
                                 ],
-                                'condition' => [
-                                    'style!' => 'style8'
-                                ]
                             ),
                             array(
                                 'name' => 'desc_typography',
                                 'label' => esc_html__('Description Typography', 'basilico' ),
                                 'type' => \Elementor\Group_Control_Typography::get_type(),
                                 'control_type' => 'group',
-                                'selector' => '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-desc',
-                                'condition' => [
-                                    'style!' => 'style8'
-                                ]
+                                'selector' => '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-content',
                             ),
                             array(
                                 'name' => 'icon_color',
@@ -174,19 +139,7 @@ pxl_add_custom_widget(
                                 'type' => \Elementor\Controls_Manager::COLOR,
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-title:before' => 'color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-item .pxl-ac-title:after' => 'color: {{VALUE}};',
                                 ],
-                            ),
-                            array(
-                                'name' => 'icon_color_active',
-                                'label' => esc_html__('Icon Color Active', 'basilico' ),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-accordion .pxl-ac-title.active:after' => 'color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'style' => 'style8'
-                                ]
                             ),
                             array(
                                 'name' => 'divider_color',

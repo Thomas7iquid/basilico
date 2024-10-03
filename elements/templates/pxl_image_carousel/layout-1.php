@@ -32,11 +32,7 @@ $widget->add_render_attribute( 'carousel', [
 ]);
 
 $img_size = !empty($img_size) ? $img_size : 'full';
-
-$arrows = $widget->get_setting('arrows', 'false');
 $arrows_style = $widget->get_setting('arrows_style', 'style-1');
-
-$dots = $widget->get_setting('dots', 'false');
 ?>
 
 <div class="pxl-swiper-slider pxl-image-carousel layout-1">
@@ -62,14 +58,7 @@ $dots = $widget->get_setting('dots', 'false');
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows <?php echo esc_attr($arrows_style);?>">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"></div>
-            </div>
-        <?php endif; ?>
-        <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
-        <?php endif; ?>
+        <?php basilico_arrow_template($settings); ?>
+        <div class="pxl-swiper-dots"></div>
     </div>
 </div>

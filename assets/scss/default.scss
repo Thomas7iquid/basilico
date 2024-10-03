@@ -198,7 +198,9 @@ input {
 }
 
 select option {
-    color: $body_color;
+    color: #000;
+    background-color: #fff;
+    @include border-radius(0px);
 }
 
 button,
@@ -381,6 +383,7 @@ dl {
         }
     }
 }
+
 .shake-effect{
     transition: transform 0.2s ease-in-out;
     animation: shakeeffect 1s ease-in-out infinite;
