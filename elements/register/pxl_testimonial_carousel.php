@@ -70,10 +70,6 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 12', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-12.jpg'
                                 ],
-                                '13' => [
-                                    'label' => esc_html__( 'Layout 13', 'basilico' ),
-                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-13.jpg'
-                                ],
                             ],
                             'prefix_class' => 'pxl-testimonial-carousel-layout-',
                         ),
@@ -145,7 +141,6 @@ pxl_add_custom_widget(
                                 'icon' => esc_html__('Icon', 'basilico'),
                                 'none' => esc_html__('None', 'basilico'),
                             ],
-                            'condition' => ['layout!' => '13'],
                             'default' => 'text'
                         ),
                         array(
@@ -164,8 +159,7 @@ pxl_add_custom_widget(
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon',
                             'condition' => [
-                                'quote_icon_type' => 'text',
-                                'layout!' => '13'
+                                'quote_icon_type' => 'text'
                             ]
                         ),
                         array(
@@ -214,45 +208,6 @@ pxl_add_custom_widget(
                                 ],
                             ),
                             array(
-                                'name' => 'dots',
-                                'label' => esc_html__('Show Dots', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::SWITCHER,
-                            ),
-                            array(
-                                'name' => 'dots_color',
-                                'label' => esc_html__('Dots Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:before' => 'background-color: {{VALUE}};',
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
-                                'name' => 'dots_color_active',
-                                'label' => esc_html__('Active Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet.swiper-pagination-bullet-active:before' => 'background-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
-                                'name' => 'border_color_active',
-                                'label' => esc_html__('Border Active Color', 'basilico'),
-                                'type' => \Elementor\Controls_Manager::COLOR,
-                                'selectors' => [
-                                    '{{WRAPPER}} .pxl-swiper-slider .pxl-swiper-dots .pxl-swiper-pagination-bullet:after' => 'border-color: {{VALUE}};',
-                                ],
-                                'condition' => [
-                                    'dots' => "true",
-                                ],
-                            ),
-                            array(
                                 'name' => 'pause_on_hover',
                                 'label' => esc_html__('Pause on Hover', 'basilico'),
                                 'type' => \Elementor\Controls_Manager::SWITCHER,
@@ -295,6 +250,14 @@ pxl_add_custom_widget(
                     ),
                 ),
                 array(
+                    'name' => 'dots_settings',
+                    'label' => esc_html__('Dots Settings', 'basilico' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_SETTINGS,
+                    'controls' => array_merge(
+                        basilico_dots_settings(),
+                    ),
+                ),
+                array(
                     'name' => 'style_section',
                     'label' => esc_html__('Style', 'basilico' ),
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
@@ -306,7 +269,6 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon' => 'color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-testimonial-carousel .icon-wrapper svg' => 'fill: {{VALUE}};',
-                                'condition' => ['layout!' => '13'],
                             ],
                         ),
                         array(
@@ -316,7 +278,6 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-testimonial-carousel' => 'background-color: {{VALUE}};',
                             ],
-                            'condition' => ['layout!' => '13'],
                         ),
                         array(
                             'name' => 'title_color',
@@ -356,19 +317,9 @@ pxl_add_custom_widget(
                             ],
                         ),
                         array(
-                            'name' => 'bg_des_color',
-                            'label' => esc_html__('Box Description Color', 'basilico' ),
-                            'type' => \Elementor\Controls_Manager::COLOR,
-                            'selectors' => [
-                                '{{WRAPPER}} .pxl-testimonial-carousel .item-desc' => 'background-color: {{VALUE}};',
-                            ],
-                            'condition' => ['layout' => '13'],
-                        ),
-                        array(
                             'name' => 'testimonial_background',
                             'label' => esc_html__('Background Image', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::MEDIA,
-                            'condition' => ['layout!' => '13'],
                         ),
                         array(
                             'name' => 'max_width',

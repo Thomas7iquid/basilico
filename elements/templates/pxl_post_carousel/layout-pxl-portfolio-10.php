@@ -11,7 +11,6 @@ if($select_post_by === 'post_selected'){
     $source  = $widget->get_setting('source_'.$settings['post_type'], '');
 }
 
-
 $orderby = $widget->get_setting('orderby', 'date');
 $order = $widget->get_setting('order', 'desc');
 $limit = $widget->get_setting('limit', -1);
@@ -92,7 +91,7 @@ if ( !empty( $item_animation) ) {
 <div class="pxl-swiper-slider pxl-portfolio-carousel layout-<?php echo esc_attr($settings['layout']);?> ">
     <?php if ($cursor !== 'false') : ?>            
         <div class="pxl-cursor">
-            <span><?php echo esc_attr($cursor_text); ?></span>
+            <span><?php echo esc_html($cursor_text); ?></span>
         </div>
     <?php endif; ?>
     <?php if ($select_post_by === 'term_selected' && $filter == "true"): ?>
@@ -148,7 +147,7 @@ if ( !empty( $item_animation) ) {
                                 <div class="content-inner">
                                     <i class="item-icon pxli pxli-coffee-bean"></i>
                                     <h4 class="item-title">
-                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                                     </h4>
                                     <?php if ($show_category == 'true') : ?>
                                         <div class="item-tags">
@@ -172,7 +171,7 @@ if ( !empty( $item_animation) ) {
                                     <?php if ($show_button == 'true') : ?>
                                         <div class="item-readmore">
                                             <a class="btn-more style-4" href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                                <span><?php echo esc_attr($button_text); ?></span>
+                                                <span><?php echo esc_html($button_text); ?></span>
                                                 <i class="zmdi zmdi-arrow-right"></i>
                                             </a>
                                         </div>
@@ -182,7 +181,7 @@ if ( !empty( $item_animation) ) {
                             <div class="box-title">
                                 <div class="title-wrap">
                                     <h4 class="item-title">
-                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                                     </h4>
                                     <?php if ($show_category == 'true') : ?>
                                         <div class="item-tags">
@@ -196,15 +195,8 @@ if ( !empty( $item_animation) ) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows style-default nav-horizontal">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="zmdi zmdi-arrow-left"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="zmdi zmdi-arrow-right"></span></div>
-            </div>
-        <?php endif; ?>
-        <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
-        <?php endif; ?>
+        <?php basilico_arrow_template($settings, 'zmdi zmdi-arrow-left', 'zmdi zmdi-arrow-right'); ?>
+        <div class="pxl-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>

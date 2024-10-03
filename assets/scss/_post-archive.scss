@@ -23,6 +23,9 @@
 	}
 	.post-excerpt {
 		margin-top: 18px;
+		@media (max-width: $sm_max) {
+			font-size: 14px;
+		}
 	}
 	.button-share {
 		margin-top: 43px;
@@ -162,6 +165,8 @@
 			background-color: $secondary_color;
 		}
 		.link-inner {
+			@include d-flex();
+			flex-direction: column;
 			position: relative;
 			z-index: 1;
 			.link-icon {
@@ -183,7 +188,7 @@
 				letter-spacing: 0.05em;
 				text-transform: uppercase;
 				color: #fff;
-				font-weight: bold;
+				font-weight: 500;
 				margin: 0 auto 30px;
 				@media (min-width: $xl_min) {
 					max-width: 75%;
@@ -394,6 +399,10 @@
 	}
 	.main-content {
 		padding: 41px 85px 52px 43px;
+		@media (max-width: $sm_max) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
 	}
 	.post-metas {
 		max-width: none;

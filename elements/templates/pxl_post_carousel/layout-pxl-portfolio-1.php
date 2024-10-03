@@ -26,8 +26,6 @@ extract(pxl_get_posts_of_grid(
     $tax
 ));
 
-$arrows = $widget->get_setting('arrows','false');  
-$dots = $widget->get_setting('dots','false');
 $cursor = $widget->get_setting('show_custom_cursor', 'false');
 $cursor_text = $widget->get_setting('custom_cursor_text', '');
 
@@ -141,7 +139,7 @@ if ( !empty( $item_animation) ) {
                             <div class="item-content remove-cursor d-flex <?php echo esc_attr($item_anm_cls) ?>" <?php pxl_print_html($data_settings); ?>>
                                 <div class="content-inner">
                                     <h4 class="item-title">
-                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                                     </h4>
                                     <?php if ($show_category == 'true') : ?>
                                         <div class="item-tags">
@@ -177,7 +175,7 @@ if ( !empty( $item_animation) ) {
                             <div class="box-title">
                                 <div class="title-wrap">
                                     <h4 class="item-title">
-                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                                     </h4>
                                     <?php if ($show_category == 'true') : ?>
                                         <div class="item-tags">
@@ -191,15 +189,8 @@ if ( !empty( $item_animation) ) {
                 <?php endforeach; ?>
             </div>
         </div>
-        <?php if($arrows !== 'false'): ?>
-            <div class="pxl-swiper-arrows style-default nav-horizontal">
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-prev"><span class="pxli pxli-arrow-prev"></span></div>
-                <div class="pxl-swiper-arrow pxl-swiper-arrow-next"><span class="pxli pxli-arrow-next"></span></div>
-            </div>
-        <?php endif; ?>
-        <?php if($dots !== 'false'): ?>
-            <div class="pxl-swiper-dots"></div>
-        <?php endif; ?>
+        <?php basilico_arrow_template($settings); ?>
+        <div class="pxl-swiper-dots"></div>
     </div>
 </div>
 <?php endif; ?>
