@@ -186,6 +186,16 @@ pxl_add_custom_widget(
                             ],
 
                         ),
+                        array(
+                            'name' => 'icon_margin',
+                            'label' => esc_html__('Icon Margin(px)', 'basilico' ),
+                            'type' => 'dimensions',
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-media-popup .media-play-button i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                        ),
                     ),
                 ),
                 array(

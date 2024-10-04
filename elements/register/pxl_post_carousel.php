@@ -220,6 +220,30 @@ pxl_add_custom_widget(
                                 'show_button'      => 'true',
                             ],
                         ),
+                        array(
+                            'name'         => 'alignment_content',
+                            'label'        => esc_html__( 'Alignment Content', 'basilico' ),
+                            'type'         => 'choose',
+                            'control_type' => 'responsive',
+                            'options' => [
+                                'start' => [
+                                    'title' => esc_html__( 'Start', 'basilico' ),
+                                    'icon'  => 'eicon-text-align-left',
+                                ],
+                                'center' => [
+                                    'title' => esc_html__( 'Center', 'basilico' ),
+                                    'icon'  => 'eicon-text-align-center',
+                                ],
+                                'end' => [
+                                    'title' => esc_html__( 'End', 'basilico' ),
+                                    'icon'  => 'eicon-text-align-right',
+                                ]
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-post-carousel.layout-post-6 .item-content' => 'display: flex; flex-direction: column; align-items: {{VALUE}}; text-align: {{VALUE}};'
+                            ],
+                            'condition' => ['layout_post' => 'post-6']
+                        ),
                     ),
                 ),
                 array(

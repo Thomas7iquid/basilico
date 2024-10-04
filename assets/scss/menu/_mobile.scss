@@ -229,3 +229,30 @@
 	background-position: center center;
 	background-size: cover;
 }
+.pxl-anchor-icon.custom-4 {
+	background-color: $secondary_color;
+	padding: 17px 16px 18px;
+    border-radius: 50%;
+	display: flex;
+	transition: all 400ms ease 0s;
+	@media (max-width: $xs_max) {
+		padding: 11px 11px 12px;
+	}
+	span{
+		width: 23px;
+		height: 20px;
+		display: inline-block;
+		background-image: url(../images/ice-creamiconmenu.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		animation: ringbell 1s ease-in-out infinite;
+		@media (max-width: $xs_max) {
+			width: 15px;
+			height: 13px;
+		}
+	}
+	&:hover{
+		background-color: $primary_color;
+	}
+}

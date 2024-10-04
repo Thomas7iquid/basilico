@@ -70,6 +70,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 12', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-12.jpg'
                                 ],
+                                '13' => [
+                                    'label' => esc_html__( 'Layout 13', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_testimonial_carousel-13.jpg'
+                                ],
                             ],
                             'prefix_class' => 'pxl-testimonial-carousel-layout-',
                         ),
@@ -141,6 +145,7 @@ pxl_add_custom_widget(
                                 'icon' => esc_html__('Icon', 'basilico'),
                                 'none' => esc_html__('None', 'basilico'),
                             ],
+                            'condition' => ['layout!' => '13'],
                             'default' => 'text'
                         ),
                         array(
@@ -159,7 +164,8 @@ pxl_add_custom_widget(
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon',
                             'condition' => [
-                                'quote_icon_type' => 'text'
+                                'quote_icon_type' => 'text',
+                                'layout!' => '13'
                             ]
                         ),
                         array(
@@ -270,6 +276,7 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-testimonial-carousel .item-quote-icon' => 'color: {{VALUE}};',
                                 '{{WRAPPER}} .pxl-testimonial-carousel .icon-wrapper svg' => 'fill: {{VALUE}};',
                             ],
+                            'condition' => ['layout!' => '13'],
                         ),
                         array(
                             'name' => 'bg_color',
@@ -278,6 +285,7 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-testimonial-carousel' => 'background-color: {{VALUE}};',
                             ],
+                            'condition' => ['layout!' => '13'],
                         ),
                         array(
                             'name' => 'title_color',
@@ -288,6 +296,15 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-testimonial-carousel.layout-8 .item-title:before,
                                  {{WRAPPER}} .pxl-testimonial-carousel.layout-8 .item-title:after' => 'color: {{VALUE}};',
                             ],
+                        ),
+                        array(
+                            'name' => 'bg_des_color',
+                            'label' => esc_html__('Box Description Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-testimonial-carousel .item-desc' => 'background-color: {{VALUE}};',
+                            ],
+                            'condition' => ['layout' => '13'],
                         ),
                         array(
                             'name' => 'testimonial_color',
@@ -320,6 +337,7 @@ pxl_add_custom_widget(
                             'name' => 'testimonial_background',
                             'label' => esc_html__('Background Image', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::MEDIA,
+                            'condition' => ['layout!' => '13'],
                         ),
                         array(
                             'name' => 'max_width',

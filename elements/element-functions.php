@@ -174,6 +174,10 @@ function basilico_get_grid_layout_options($post_type_name){
                 'label' => esc_html__('Layout 7', 'basilico'),
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-7.jpg'
             ],
+            'pxl-portfolio-8' => [
+                'label' => esc_html__('Layout 8', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-pxl-portfolio-8.jpg'
+            ],
         ];
         break;
         case 'post':
@@ -395,6 +399,10 @@ function basilico_get_carousel_layout_options($post_type_name){
                 'label' => esc_html__('Layout 5', 'basilico'),
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-5.jpg'
             ],
+            'post-6' => [
+                'label' => esc_html__('Layout 6', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_grid-layout4.jpg'
+            ],
         ];
         break;
         case 'pxl-portfolio':
@@ -442,6 +450,10 @@ function basilico_get_carousel_layout_options($post_type_name){
             'pxl-portfolio-11' => [
                 'label' => esc_html__('Layout 11', 'basilico'),
                 'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-11.jpg'
+            ],
+            'pxl-portfolio-12' => [
+                'label' => esc_html__('Layout 12', 'basilico'),
+                'image' => get_template_directory_uri() . '/elements/assets/layout-image/post_carousel-pxl-portfolio-12.jpg'
             ],
         ];
         break;

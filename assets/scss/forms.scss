@@ -670,3 +670,54 @@ textarea{
         }
     }
 } 
+.contact-creams{
+    .form-info{
+        display: flex;
+        gap: 23px;
+        input{
+            color: #0c0c0c;
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0;
+            // @media (max-width: $xs_max) {
+            //     width: 100%;
+            // }
+            &::placeholder{
+                color: #0c0c0c;
+                font-size: 15px;
+                line-height: 26px;
+                letter-spacing: 0;
+            }
+        }
+        @media (max-width: $xs_max) {
+           flex-direction: column;
+           gap: 20px;
+        }
+    }
+    .form-mess{
+        border-radius: 20px;
+        margin: 23px 0 50px;
+        resize: none;
+        color: #0c0c0c;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0;
+        &::placeholder{
+            color: #0c0c0c;
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0;
+        }
+    }
+    .contact-btn {
+        i{
+            margin-left: 11px;
+            font-size: 15px;
+        }
+        &:hover{
+            i{
+                animation: left-right-move-2 1s ease-in-out infinite;
+            }
+        }
+    }
+}

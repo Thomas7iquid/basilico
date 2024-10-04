@@ -54,7 +54,11 @@ pxl_add_custom_widget(
                                 '9' => [
                                     'label' => esc_html__( 'Layout 9', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-9.jpg'
-                                ]
+                                ],
+                                '10' => [
+                                    'label' => esc_html__( 'Layout 10', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-10.jpg'
+                                ],
                             ]
                         )
                     )
@@ -84,6 +88,24 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-fancy-box .box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
                                 '{{WRAPPER}} .pxl-fancy-box .box-icon > svg' => 'width: {{SIZE}}{{UNIT}} !important;',
                             ],
+                            'condition' => ['layout!' => '9']
+                        ),
+                        array(
+                            'name'  => 'icon_size_9',
+                            'label' => esc_html__( 'Icon Size', 'basilico' ),
+                            'type'  => 'slider',
+                            'range' => [
+                                'px' => [
+                                    'min' => 15,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-icon .pxl-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                                '{{WRAPPER}} .pxl-fancy-box .box-icon .pxl-icon svg' => 'width: {{SIZE}}{{UNIT}} !important;',
+                            ],
+                            'condition' => ['layout' => '9'],
+                            'control_type' => 'responsive',
                         ),
                         array(
                             'name' => 'icon_margin',
@@ -121,10 +143,10 @@ pxl_add_custom_widget(
                                 'url' => \Elementor\Utils::get_placeholder_image_src()
                             ],
                             'condition' => [
-                                'layout'    => ['7', '9']
+                                'layout'    => ['7']
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box.layout-9' => 'background-image: url( {{URL}} );',
+                                '{{WRAPPER}} .pxl-fancy-box.layout-7' => 'background-image: url( {{URL}} );',
                             ],
                         ),
                         array(
@@ -169,6 +191,26 @@ pxl_add_custom_widget(
                             'label'    => esc_html__('Description', 'basilico'),
                             'type'     => 'textarea',
                             'default'  => esc_html__('Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'basilico'),
+                            'condition' => [
+                                'layout!'    => ['9']
+                            ]
+                        ),
+                        array(
+                            'name' => 'boxs_des',
+                            'label' => esc_html__('Item', 'basilico'),
+                            'type' => \Elementor\Controls_Manager::REPEATER,
+                            'default' => [],
+                            'controls' => array(
+                                array(
+                                    'name'     => 'des_layout9',
+                                    'label'    => esc_html__('Description', 'basilico'),
+                                    'type'     => 'textarea',
+                                ),
+                            ),
+                            'title_field' => '{{{ des_layout9 }}}',
+                            'condition' => [
+                                'layout'    => ['9']
+                            ]
                         ),
                         array(
                             'name' => 'button_text',
@@ -206,6 +248,35 @@ pxl_add_custom_widget(
                             'selectors' => [
                                 '{{WRAPPER}} .pxl-fancy-box .box-icon' => 'background-color: {{VALUE}};'
                             ],
+                            'condition' => [
+                                'layout!' => ['9','10']
+                            ]
+                        ),
+                        array(
+                            'name' => 'padding',
+                            'label' => esc_html__('Padding Box', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'control_type' => 'responsive',
+                            'condition' => [
+                                'layout' => ['10']
+                            ]
+                        ),
+                        array(
+                            'name' => 'border_radius',
+                            'label' => esc_html__('Border Radius Box', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'control_type' => 'responsive',
+                            'condition' => [
+                                'layout' => ['10']
+                            ]
                         ),
                         array(
                             'name' => 'icon_color',
@@ -251,6 +322,37 @@ pxl_add_custom_widget(
                             'selector' => '{{WRAPPER}} .pxl-fancy-box .box-title',
                         ),
                         array(
+                            'name' => 'title_margin',
+                            'label' => esc_html__('Title Margin', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                            'size_units' => [ 'px' ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-title' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                            ],
+                            'control_type' => 'responsive',
+                            'condition' => [
+                                'layout' => ['10']
+                            ]
+                        ),
+                        array(
+                            'name'  => 'title_max_width',
+                            'label' => esc_html__( 'Max Width Title', 'basilico' ),
+                            'type'  => 'slider',
+                            'control_type' => 'responsive',
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 1200,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-title' => 'max-width: {{SIZE}}{{UNIT}};',
+                            ],
+                            'condition' => [
+                                'layout' => ['9','10']
+                            ]
+                        ),
+                        array(
                             'name' => 'description_color',
                             'label' => esc_html__( 'Description Color', 'basilico' ),
                             'type' => \Elementor\Controls_Manager::COLOR,
@@ -278,6 +380,17 @@ pxl_add_custom_widget(
                             ]
                         ),
                         array(
+                            'name' => 'boxshadow_background',
+                            'label' => esc_html__('Boxshadow Color', 'basilico' ),
+                            'type' => 'color',
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-inner' => 'box-shadow: 0 10px 0 {{VALUE}};'
+                            ],
+                            'condition' => [
+                                'layout' => '9'
+                            ]
+                        ),
+                        array(
                             'name' => 'border_inner_color',
                             'label' => esc_html__('Border Inner Color', 'basilico' ),
                             'type' => 'color',
@@ -285,7 +398,7 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-fancy-box.layout-6 .back-card:before' => 'border-color: {{VALUE}};'
                             ],
                             'condition' => [
-                                'layout!' => '6'
+                                'layout!' => ['6','9','10']
                             ]
                         ),
                         array(
@@ -350,6 +463,28 @@ pxl_add_custom_widget(
                             'condition' => [
                                 'layout' => '2',
                             ],
+                        ),
+                        array(
+                            'name' => 'readmore_color',
+                            'label' => esc_html__('Button Text Color', 'basilico' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-fancy-box .box-readmore' => 'color: {{VALUE}};',
+                            ],
+                            'condition' => [
+                                'layout'    => ['9']
+                            ]
+                        ),
+                        array(
+                            'name' => 'readmore_typography',
+                            'label' => esc_html__('Button Text Typography', 'basilico' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-fancy-box .box-readmore',
+                            'condition' => [
+                                'layout'    => ['9'],
+                                'layout!'    => ['10']
+                            ]
                         ),
                     ),
                 ),

@@ -525,6 +525,8 @@
         box-shadow: 0 5px 0 #d32b42;
         transition: all 400ms ease 0s;
         overflow: hidden;
+        line-height: 50px;
+        padding: 0 30px;
         &::before {
             content: '';
             position: absolute;

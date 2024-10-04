@@ -31,7 +31,7 @@ pxl_add_custom_widget(
                                 'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
                                 'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                                 'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
-                                'btn-additional-9' => esc_html__('Additional Button 08', 'basilico' ),
+                                'btn-additional-9' => esc_html__('Additional Button 09', 'basilico' ),
                             ],
                         ),
                         array(
@@ -285,6 +285,20 @@ pxl_add_custom_widget(
                                     '{{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-6:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-7:hover, {{WRAPPER}} .pxl-button-wrapper .btn.btn-additional-5:hover' => 'background-color: {{VALUE}};',
                                     '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};'
                                 ],
+                                'condition' => [
+                                    'style!' => ['btn-additional-9'],
+                                ],
+                            ),
+                            array(
+                                'name' => 'btn_bg_color_hover_style9',
+                                'label' => esc_html__('Background Color Hover', 'basilico' ),
+                                'type' => \Elementor\Controls_Manager::COLOR,
+                                'selectors' => [
+                                    '{{WRAPPER}} .pxl-button-wrapper .btn:before' => 'background-color: {{VALUE}};',
+                                ],
+                                'condition' => [
+                                    'style' => ['btn-additional-9'],
+                                ],
                             ),
                         ),
                         array(
@@ -347,6 +361,52 @@ pxl_add_custom_widget(
                                 'selectors' => [
                                     '{{WRAPPER}} .pxl-button-wrapper .btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                                 ],
+                            ),
+                            array(
+                                'name' => 'mc_style_input_tabs',
+                                'control_type' => 'tab',
+                                'tabs' => array(
+                                    array(
+                                        'name' => 'input_style_normal',
+                                        'label' => esc_html__('Normal', 'basilico'),
+                                        'controls' => array(
+                                            array(
+                                                'name' => 'button_shadow',
+                                                'label'        => esc_html__( 'Box Shadow', 'basilico' ),
+                                                'type'         => \Elementor\Group_Control_Box_Shadow::get_type(),
+                                                'control_type' => 'group',
+                                                'exclude' => [
+                                                    'box_shadow_position',
+                                                ],
+                                                'condition' => [
+                                                    'style' => ['btn-additional-9'],
+                                                ],
+                                                'selector' => 
+                                                    '{{WRAPPER}} .pxl-button-wrapper .btn'
+                                            ),
+                                        )
+                                    ),
+                                    array(
+                                        'name' => 'input_style_hover',
+                                        'label' => esc_html__('Hover', 'basilico'),
+                                        'controls' => array(
+                                            array(
+                                                'name' => 'button_hover_shadow',
+                                                'label'        => esc_html__( 'Box Shadow', 'basilico' ),
+                                                'type'         => \Elementor\Group_Control_Box_Shadow::get_type(),
+                                                'control_type' => 'group',
+                                                'exclude' => [
+                                                    'box_shadow_position',
+                                                ],
+                                                'condition' => [
+                                                    'style' => ['btn-additional-9'],
+                                                ],
+                                                'selector' => 
+                                                    '{{WRAPPER}} .pxl-button-wrapper .btn:hover'
+                                            ),
+                                        ),
+                                    ),
+                                ),
                             ),
                         )
                     ),
