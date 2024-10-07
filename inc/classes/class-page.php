@@ -13,7 +13,7 @@ if (!class_exists('Basilico_Page')) {
                     case 'gif_image': ?>
                         <div id="pxl-loadding" class="pxl-loader content-image">
                             <?php
-                            $static_img_extensions = ['jpg', 'jpeg', 'bmp'];
+                            $static_img_extensions = ['jpg', 'jpeg', 'bmp', 'png'];
                             $img_extension = strtolower(pathinfo($loader_image['url'], PATHINFO_EXTENSION));
                             if(!empty($loader_image['url'])) { ?>
                                 <img src="<?php echo esc_url($loader_image['url']);?>" <?php echo in_array($img_extension, $static_img_extensions) ? 'class="static-img-loading"' : ''; ?>>
