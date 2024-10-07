@@ -7,15 +7,16 @@ if (!class_exists('Basilico_Page')) {
             $site_loader = basilico()->get_theme_opt( 'site_loader', false );
             $site_loader_style = basilico()->get_theme_opt('site_loader_style', 'default');
             $loader_image = basilico()->get_theme_opt( 'loader_image', array( 'url' => '', 'id' => '' ) );
-            $static_img_extensions = ['jpg', 'jpeg', 'bmp'];
 
             if ($site_loader){
                 switch ( $site_loader_style ) {
                     case 'gif_image': ?>
                         <div id="pxl-loadding" class="pxl-loader content-image">
                             <?php
+                            $static_img_extensions = ['jpg', 'jpeg', 'bmp'];
+                            $img_extension = strtolower(pathinfo($loader_image['url'], PATHINFO_EXTENSION));
                             if(!empty($loader_image['url'])) { ?>
-                                <img src="<?php echo esc_url($loader_image['url']);?>" <?php echo in_array(strtolower(pathinfo($loader_image['url'])['extension']), $static_img_extensions) ? 'class="static-img-loading"' : ''; ?>>
+                                <img src="<?php echo esc_url($loader_image['url']);?>" <?php echo in_array($img_extension, $static_img_extensions) ? 'class="static-img-loading"' : ''; ?>>
                             <?php }
                             ?>
                         </div>
