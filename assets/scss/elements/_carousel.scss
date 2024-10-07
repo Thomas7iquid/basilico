@@ -4863,59 +4863,6 @@
     }
 }
 
-//* PXL Tabs Carousel
-.pxl-tabs-carousel-container {
-    .pxl-swiper-arrows {
-        &.style-df {
-            margin-top: 37px;
-            .pxl-swiper-arrow {
-                cursor: pointer;
-                position: static;
-                display: inline-block;
-                top: 0;
-                transform: none;
-                &.slick-disabled {
-                    cursor: not-allowed;
-                }
-                &.pxl-swiper-arrow-next {
-                    margin-left: 30px;
-                }
-                .pxl-icon {
-                    font-size: 25px;
-                }
-            }
-        }
-        &.style-2 {
-            margin-top: 30px;
-            .pxl-swiper-arrow {
-                cursor: pointer;
-                position: static;
-                top: 0;
-                color: #fff;
-                background-color: $secondary_color;
-                width: 62px;
-                height: 62px;
-                @include border-radius(50%);
-                @include d-flex();
-                align-items: center;
-                justify-content: center;
-                transform: none;
-                @include box-shadow(0px 0px 18.27px 2.73px rgba(0, 0, 0, 0.2));
-                &.slick-disabled {
-                    cursor: not-allowed;
-                }
-                &.pxl-swiper-arrow-next {
-                    margin-left: 30px;
-                }
-                .pxl-icon {
-                    font-size: 25px;
-                }
-            }
-        }
-    }
-}
-
-
 .pxl-tabs-carousel .pxl-carousel-item .swiper-slide .swiper-slide-inner {
     width: 100%;
 }
