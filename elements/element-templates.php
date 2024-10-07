@@ -1685,7 +1685,7 @@ function basilico_get_post_grid_layout4($posts = [], $settings = [], $args_m = [
                             </div>
                         </div>
                     <?php endif; ?>
-                    <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a></h4>
+                    <h4 class="item-title"><a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a></h4>
                     <?php if ($show_excerpt == 'true') : ?>
                         <div class="item-excerpt">
                             <?php
@@ -2173,7 +2173,7 @@ function basilico_get_post_grid_pxl_portfolio8($posts = [], $settings = [], $arg
                 <div class="item-content">
                     <div class="content-inner">
                         <h4 class="item-title">
-                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_attr(get_the_title($post->ID)); ?></a>
+                            <a href="<?php echo esc_url(get_permalink($post->ID)); ?>"><?php echo esc_html(get_the_title($post->ID)); ?></a>
                         </h4>
                         <?php
                         if ($show_category == 'true') {
