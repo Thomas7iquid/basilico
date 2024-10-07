@@ -13,7 +13,7 @@ if (!class_exists('Basilico_Page')) {
                         <div id="pxl-loadding" class="pxl-loader content-image">
                             <?php
                             if(!empty($loader_image['url'])) { ?>
-                                <img src="<?php echo esc_url($loader_image['url']);?>">
+                                <img src="<?php echo esc_url($loader_image['url']);?>" <?php echo (pathinfo($loader_image['url'])['extension'] == 'jpg' || pathinfo($loader_image['url'])['extension'] == 'png') ? 'class="static-img-loading"' : ''; ?>>
                             <?php }
                             ?>
                         </div>

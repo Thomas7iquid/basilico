@@ -495,8 +495,8 @@
     &.btn-additional-8 {
         font-family: $heading_font_family;
         background-color: $primary_color;
-        line-height: 50px;
-        height: 50px;
+        height: $input_height;
+        height: $input_height;
         font-size: 15px;
         font-weight: 600;
         letter-spacing: 0.15em;
@@ -525,7 +525,7 @@
         box-shadow: 0 5px 0 #d32b42;
         transition: all 400ms ease 0s;
         overflow: hidden;
-        line-height: 50px;
+        line-height: $input_height;
         padding: 0 30px;
         &::before {
             content: '';
