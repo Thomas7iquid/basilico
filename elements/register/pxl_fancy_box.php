@@ -150,7 +150,7 @@ pxl_add_custom_widget(
                                 'layout'    => ['7', '11']
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box.layout-7 .box-inner, {{WRAPPER}} .pxl-fancy-box.layout-11 .box-inner' => 'background-image: url( {{URL}} );',
+                                '{{WRAPPER}} .pxl-fancy-box.layout-7 .box-inner, {{WRAPPER}} .pxl-fancy-box.layout-11' => 'background-image: url( {{URL}} );',
                             ],
                         ),
                         array(
