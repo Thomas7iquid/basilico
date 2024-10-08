@@ -255,7 +255,7 @@ if (!class_exists('Basilico_Comment')) {
                 'comment_subject' => ''
             ];
 
-            $button_style = basilico()->get_theme_opt('post_comments_button', 'default');
+            $button_style = basilico()->get_theme_opt('post_comments_button_style', 'default');
 
             $pxl_comment_fields = array(
                 'id_form'              => 'commentform',
@@ -357,7 +357,7 @@ if (!class_exists('Basilico_Comment')) {
                 'comment_subject' => ''
             ];
 
-            $button_style = basilico()->get_theme_opt('post_comments_button', 'btn-outline');
+            $button_style = basilico()->get_theme_opt('post_comments_button_style', 'btn-outline');
             $pxl_comment_fields = array(
                 'id_form'              => 'commentform',
                 'title_reply'          => esc_attr__( 'Leave a Review', 'basilico'),

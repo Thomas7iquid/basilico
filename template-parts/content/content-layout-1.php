@@ -5,6 +5,7 @@
  */
 
 $archive_readmore = basilico()->get_theme_opt('archive_readmore', '0');
+$archive_readmore_btn_style = basilico()->get_theme_opt('archive_readmore_button_style', 'btn_outline_secondary');
 $archive_readmore_text = basilico()->get_theme_opt('archive_readmore_text', esc_html__('Continue reading', 'basilico'));
 $post_social_share = basilico()->get_theme_opt('post_social_share', false);
 $featured_video = get_post_meta(get_the_ID(), 'featured-video-url', true);
@@ -146,7 +147,7 @@ $audio_url = get_post_meta(get_the_ID(), 'featured-audio-url', true);
                     if ($archive_readmore == '1') {
                     ?>
                         <div class="post-btn-wrap col-sm-6">
-                            <a class="btn btn-outline-secondary" href="<?php echo esc_url(get_permalink()); ?>">
+                            <a class="btn <?php echo esc_html($archive_readmore_btn_style); ?>" href="<?php echo esc_url(get_permalink()); ?>">
                                 <span><?php echo esc_html($archive_readmore_text); ?></span>
                             </a>
                         </div>

@@ -29,7 +29,7 @@
                             <span><?php echo esc_html__( 'The page you are looking is not available or has been removed. Try going to Home Page by using the button below.', 'basilico' );?></span>
                         </div>
                         <div class="pxl-button-wrapper">
-                            <a class="btn btn-outline" href="<?php echo esc_url(home_url('/')); ?>">
+                            <a class="btn btn-outline-secondary" href="<?php echo esc_url(home_url('/')); ?>">
                                 <span class="pxl-button-wrapper"></span>
                                 <span><?php echo esc_html__('back to homepage', 'basilico') ?></span>
                             </a>

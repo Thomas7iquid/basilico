@@ -3,6 +3,7 @@
  * @package Basilico
  */
 $archive_readmore = basilico()->get_theme_opt('archive_readmore', '0');
+$archive_readmore_btn_style = basilico()->get_theme_opt('archive_readmore_button_style', 'btn_outline_secondary');
 $archive_readmore_text = basilico()->get_theme_opt( 'archive_readmore_text', esc_html__('Read more', 'basilico') );
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('pxl-archive-post search-results-post'); ?>>
@@ -31,7 +32,7 @@ $archive_readmore_text = basilico()->get_theme_opt( 'archive_readmore_text', esc
         </div>
         <?php if( $archive_readmore == '1'): ?>
             <div class="post-readmore">
-                <a class="btn" href="<?php echo esc_url( get_permalink()); ?>">
+                <a class="btn <?php echo esc_html($archive_readmore_btn_style); ?>" href="<?php echo esc_url( get_permalink()); ?>">
                     <span><?php pxl_print_html($archive_readmore_text); ?></span>
                 </a>
             </div>

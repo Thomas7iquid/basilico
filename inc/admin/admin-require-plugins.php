@@ -76,6 +76,13 @@ function basilico_register_required_plugins() {
             'description' => esc_html__( 'WPC Smart Wishlist is a simple but powerful tool that can help your customer save products for buying later.', 'basilico' ),
         ),
         array(
+            'name'               => esc_html__('YITH WooCommerce Product Add-Ons', 'basilico'),
+            'slug'               => "yith-woocommerce-product-add-on",
+            'required'           => false,
+            'logo'        => $images . '/yith-addons.gif',
+            'description' => esc_html__( 'YITH Product Add-ons & Extra Options is a versatile and complete tool for the creation and sale of advanced products or services and the addition of custom options to your product pages.', 'basilico' ),
+        ),
+        array(
             'name'               => esc_html__('Classic Editor', 'basilico'),
             'slug'               => "classic-editor",
             'required'           => false,

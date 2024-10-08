@@ -118,6 +118,24 @@ $args = array(
     ),
 );
 
+function basilico_button_options() {
+    return array(
+        'btn-default' => esc_html__('Default', 'basilico' ),
+        'btn-white' => esc_html__('White', 'basilico' ),
+        'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
+        'btn-outline' => esc_html__('Out Line', 'basilico' ),
+        'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
+        'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
+        'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
+        'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
+        'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
+        'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
+        'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
+        'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
+        'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
+    );
+}
+
 Redux::SetArgs($opt_name, $args);
 
 //* General
@@ -391,6 +409,19 @@ Redux::setSection($opt_name, array(
                 'default'  => true,
             ),
             array(
+                'id'       => 'archive_readmore_button_style',
+                'type'     => 'select',
+                'title'    => esc_html__('Readmore Button Style', 'basilico'),
+                'subtitle' => esc_html__('Select button style for readmore button.', 'basilico'),
+                'options' => basilico_button_options(),
+                'default' => 'btn-outline-secondary',
+                'required' => [
+                   'archive_readmore',
+                   'equals',
+                   '1' 
+                ]
+            ),
+            array(
                 'id'      => 'archive_readmore_text',
                 'type'    => 'text',
                 'title'   => esc_html__('Read More Text', 'basilico'),
@@ -483,25 +514,11 @@ Redux::setSection($opt_name, array(
                 'default'  => '1',
             ),
             array(
-                'id'       => 'post_comments_button',
+                'id'       => 'post_comments_button_style',
                 'type'     => 'select',
                 'title'    => esc_html__('Post Comments Button Style', 'basilico'),
                 'subtitle' => esc_html__('Select button style for comment form.', 'basilico'),
-                'options' => array(
-                    'btn-default' => esc_html__('Default', 'basilico' ),
-                    'btn-white' => esc_html__('White', 'basilico' ),
-                    'btn-fullwidth' => esc_html__('Full Width', 'basilico' ),
-                    'btn-outline' => esc_html__('Out Line', 'basilico' ),
-                    'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
-                    'btn-additional-1' => esc_html__('Additional Button 01', 'basilico' ),
-                    'btn-additional-2' => esc_html__('Additional Button 02', 'basilico' ),
-                    'btn-additional-3' => esc_html__('Additional Button 03', 'basilico' ),
-                    'btn-additional-4' => esc_html__('Additional Button 04', 'basilico' ),
-                    'btn-additional-5' => esc_html__('Additional Button 05', 'basilico' ),
-                    'btn-additional-6' => esc_html__('Additional Button 06', 'basilico' ),
-                    'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
-                    'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
-                ),
+                'options' => basilico_button_options(),
                 'default' => 'btn-outline-secondary',
                 'required' => [
                    'post_comments_on',
@@ -554,7 +571,7 @@ Redux::setSection($opt_name, array(
                 'title'    => esc_html__('Navigation', 'basilico'),
                 'subtitle' => esc_html__('Display the Navigation for blog post.', 'basilico'),
                 'type'     => 'switch',
-                'default'  => '1',
+                'default'  => '0',
             ),
         )
     )

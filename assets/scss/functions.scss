@@ -147,3 +147,9 @@ $spacers: (
         }
     }
 }
+
+.pxl-column-fullwidth-yes {
+	@media (min-width: $xxl_min) {
+		width: 100% !important;
+	}
+}

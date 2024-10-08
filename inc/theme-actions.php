@@ -241,10 +241,12 @@ function basilico_hook_anchor_side_mobile_default(){
     $header_mobile_layout = (int)basilico()->get_opt('header_mobile_layout'); 
     if( $header_mobile_layout > 0 ) return;
     ?>
-    <nav class="pxl-hidden-template pos-left pxl-side-mobile">
+    <nav class="pxl-hidden-template pos-left pxl-side-mobile df">
         <div class="pxl-panel-header">
             <div class="panel-header-inner">
-                <a href="#" class="pxl-close" data-target=".pxl-side-mobile" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>"></a>
+                <a href="#" class="pxl-close" data-target=".pxl-side-mobile" title="<?php echo esc_attr__( 'Close', 'basilico' ) ?>">
+                    <i class="pxli pxli-remove1"></i>
+                </a>
             </div>
         </div> 
         <div class="pxl-panel-content custom_scroll">

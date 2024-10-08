@@ -104,7 +104,7 @@ if (!class_exists('Basilico_Header')) {
                                 <div class="row align-items-center justify-content-end">
                                     <div class="header-mobile-nav">
                                         <span class="menu-mobile-toggle-nav open-menu pxl-anchor side-panel" data-target=".pxl-side-mobile" onclick="">
-                                            <span aria-hidden="true" class="pxl-icon lnir lnir-menu"></span>
+                                            <span aria-hidden="true" class="pxl-icon zmdi zmdi-menu"></span>
                                         </span>
                                     </div>
                                 </div>

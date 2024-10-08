@@ -125,6 +125,17 @@ a.logo-mobile{
     display: block;
     max-width: $logo_mobile_width;
 }
+.pxl-header-mobile {
+    .menu-mobile-toggle-nav .pxl-icon {
+        font-size: 30px;
+        color: $heading_color;
+        cursor: pointer;
+        transition: color 0.3s linear;
+        &:hover {
+            color: $primary_color;
+        }
+    }
+}
 @media (max-width: $lg_max){
 	.pxl-header-mobile,
     .header-mobile-type-df{

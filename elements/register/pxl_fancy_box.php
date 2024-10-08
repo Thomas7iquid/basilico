@@ -59,6 +59,10 @@ pxl_add_custom_widget(
                                     'label' => esc_html__( 'Layout 10', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-10.jpg'
                                 ],
+                                '11' => [
+                                    'label' => esc_html__( 'Layout 10', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-11.jpg'
+                                ],
                             ]
                         )
                     )
@@ -143,10 +147,10 @@ pxl_add_custom_widget(
                                 'url' => \Elementor\Utils::get_placeholder_image_src()
                             ],
                             'condition' => [
-                                'layout'    => ['7']
+                                'layout'    => ['7', '11']
                             ],
                             'selectors' => [
-                                '{{WRAPPER}} .pxl-fancy-box.layout-7 .box-inner' => 'background-image: url( {{URL}} );',
+                                '{{WRAPPER}} .pxl-fancy-box.layout-7 .box-inner, {{WRAPPER}} .pxl-fancy-box.layout-11 .box-inner' => 'background-image: url( {{URL}} );',
                             ],
                         ),
                         array(

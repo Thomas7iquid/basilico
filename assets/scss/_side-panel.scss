@@ -196,14 +196,6 @@
         .elementor-section-boxed .elementor-inner-section > .elementor-column-gap-default{
             margin: 0;
         }
-        &.pxl-side-mobile{
-            .pxl-close{
-                position: relative;
-                top: 0;
-                right: 0;
-                margin-bottom: 15px;
-            }
-        }
     }
     &.pxl-side-mobile{
         .pxl-close{
@@ -211,7 +203,19 @@
                 margin-left: 0;
             }
         }
-
+        &.df {
+            .pxl-panel-content {
+                padding: 50px 25px 30px 35px;
+            }
+        }
+        .pxl-close {
+            position: static;
+            margin-bottom: 15px;
+            margin-left: auto;
+            font-size: 20px;
+            padding-top: 20px;
+            padding-right: 20px;
+        }
     }
     &.mobile-panel-df .pxl-logo{
         max-width: 105px;
