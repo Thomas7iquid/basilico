@@ -120,16 +120,16 @@
 .pxl-footer-bottom{
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background: $primary_color;
+	background: $secondary_color;
 	color: #fff;
 	font-size: 16px;
 }
  
 .pxl-copyright-text{
 	a{
-		color: $secondary_color;
-		&:hover{
-			color: #fff;
+		color: #fff;
+		&:hover {
+			color: $primary_color;
 		}
 	}
 }

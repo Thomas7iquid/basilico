@@ -45,7 +45,7 @@ if (!class_exists('Basilico_Header')) {
                             <div class="pxl-navigation col">
                                 <div class="row align-items-center justify-content-end">
                                     <div class="col-12">
-                                        <div class="row align-items-center">
+                                        <div class="row align-items-center justify-content-end">
                                             <div class="pxl-main-navigation col-12 col-xl-auto">
                                                 <?php 
                                                 if ( has_nav_menu( 'primary' ) ){

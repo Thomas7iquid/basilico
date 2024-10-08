@@ -1,4 +1,5 @@
 ( function( $ ) {
+    'use strict';
     var PXLTabsCarouselHandler = function( $scope, $ ) {
         var settings = $scope.find(".pxl-tabs-carousel").first().data("settings");
         $scope.find(".pxl-tabs-carousel").first().slick({

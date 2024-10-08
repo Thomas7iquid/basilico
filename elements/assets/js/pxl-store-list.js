@@ -1,4 +1,5 @@
 ( function( $ ) {
+    'use strict';
     var PXLStoreListHander = function( $scope, $ ) {
         $scope.find('.pxl-store').on('click', function() {
             $(this).addClass('selected').siblings().removeClass('selected');

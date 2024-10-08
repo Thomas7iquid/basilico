@@ -1,4 +1,5 @@
 ( function( $ ) {
+    'use strict';
     var PXLTypewriteHandler = function( $scope, $ ) {
         var highlight_on = $scope.find(".typewrite");
         if(highlight_on.length == 0){

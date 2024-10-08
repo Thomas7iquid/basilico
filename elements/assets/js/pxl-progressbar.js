@@ -3,6 +3,8 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+
+    'use strict';
     var PXLProgressBarHandler = function( $scope, $ ) {
         elementorFrontend.waypoint($scope.find('.pxl-progress-bar'), function () {
             $(this).progressbar();

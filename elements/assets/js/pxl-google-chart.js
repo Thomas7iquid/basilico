@@ -3,6 +3,8 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+
+    'use strict';
     var PXLGoogleChartHandler = function( $scope, $ ) {
         $scope.find(".pxl-google-chart").each(function(){
             var $this = $(this);

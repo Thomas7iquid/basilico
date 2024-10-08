@@ -14,7 +14,28 @@
     position: relative;
     z-index: 9;
     @include transition(all 0.3s cubic-bezier(.3,.4,.5, 1) 0s);
+    .header-container {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px;
+    }
 }
+
+ /* Header Logo */
+ .pxl-header-logo{
+     img{
+         max-height: 49px;
+         width: auto;
+     }
+     a{
+         display: block;
+         @media (max-width: $lg_max){
+             padding-top: 10px;
+             padding-bottom: 10px;
+         }
+     }
+ }
 
 .header-type-df{
     position: absolute;

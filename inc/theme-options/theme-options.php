@@ -502,7 +502,7 @@ Redux::setSection($opt_name, array(
                     'btn-additional-7' => esc_html__('Additional Button 07', 'basilico' ),
                     'btn-additional-8' => esc_html__('Additional Button 08', 'basilico' ),
                 ),
-                'default' => 'btn-outline',
+                'default' => 'btn-outline-secondary',
                 'required' => [
                    'post_comments_on',
                    'equals',
@@ -652,7 +652,7 @@ Redux::setSection($opt_name, array(
             'type'        => 'color',
             'title'       => esc_html__('Text Box Border Color', 'basilico'),
             'transparent' => false,
-            'default'     => '#e6c9a2'
+            'default'     => '#0e1927'
         ),
         array(
             'id'          => 'input_border_hover',

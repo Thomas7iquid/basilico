@@ -3,6 +3,8 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+
+    'use strict';
     var PxlAccordionHandler = function( $scope, $ ) {
         $scope.find(".pxl-accordion .pxl-ac-item .pxl-ac-title").on("click", function(e){
             e.preventDefault();

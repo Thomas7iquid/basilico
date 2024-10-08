@@ -1,4 +1,6 @@
 (function ($) {
+
+    'use strict';
     var PXLPostCreateHandler = function ($scope, $) {
         let innerHeight = 0;
         var itemBG = [];

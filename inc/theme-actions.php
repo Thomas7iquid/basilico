@@ -149,6 +149,12 @@ function basilico_scripts() {
     if(isset($smoothscroll) && $smoothscroll) {
         wp_enqueue_script('basilico-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array('jquery'), '1.0.0', true);
     }
+
+    if ( !wp_script_is( 'swiper', 'registered' )) {
+        wp_register_script('swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', [], '10.3.0');
+    }
+    
+    wp_register_script('basilico-swiper', get_template_directory_uri() . '/elements/assets/js/pxl-swiper-carousel.js', ['jquery'], basilico()->get_version(), true);
     wp_localize_script( 'basilico-main', 'main_data', $js_variables );
     do_action( 'basilico_scripts');
 }

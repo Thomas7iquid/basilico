@@ -90,8 +90,8 @@ if(!function_exists('basilico_configs')){
                 'regular'     => 'var(--heading-color)',
                 'hover'       => 'var(--heading-color)',
                 'active'      => 'var(--heading-color)',
-                'font_size'   => '15px',
-                'font_weight' => 400,
+                'font_size'   => '17px',
+                'font_weight' => 700,
                 'font_family' => $heading_font
             ],
             'dropdown' => [
@@ -101,7 +101,7 @@ if(!function_exists('basilico_configs')){
                 'hover'         => 'var(--primary-color)',
                 'active'        => 'var(--primary-color)',
                 'font_size'     => '15px',
-                'font_weight'   => '500',
+                'font_weight'   => '700',
                 'item_bg'       => 'transparent',
                 'item_bg_hover' => '#ffffff'
             ],

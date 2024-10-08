@@ -3,6 +3,8 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+    
+    'use strict';
     function pxl_widget_show_on_column_hover() {
         $('.elementor-column .elementor-widget-wrap').each(function(){
             if ($(this).find('> .pxl-show-on-column-hover').length > 0) {

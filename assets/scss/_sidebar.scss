@@ -784,6 +784,9 @@ ul.menu {
                 }
             }
         }
+        ul ul, ul ol, ol ul, ol ol {
+            padding-left: 25px;
+        }
     }
 }
 
@@ -836,6 +839,9 @@ ul.menu {
                     text-decoration: none;
                 }
             }
+        }
+        ul ul, ul ol, ol ul, ol ol {
+            padding-left: 25px;
         }
     }
 }

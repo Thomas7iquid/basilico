@@ -5,12 +5,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $product_layout = basilico()->get_theme_opt('product_layout', 'layout-1');
 
-$col_xs = '1';  
-$col_sm = '2';  
-$col_md = '2';  
-$col_lg = '3';
-$col_xl = basilico()->get_opt('product_related_col_xl', '3');
-$col_xxl = basilico()->get_opt('product_related_col_xxl', '3');
+$col_xs = 1;  
+$col_sm = 2;  
+$col_md = 2;  
+$col_lg = 3;
+$col_xl = basilico()->get_opt('product_related_col_xl', 3);
+$col_xxl = basilico()->get_opt('product_related_col_xxl', 3);
 
 wp_enqueue_script( 'swiper' );
 wp_enqueue_script( 'basilico-swiper' );

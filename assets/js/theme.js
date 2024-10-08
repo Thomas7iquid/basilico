@@ -247,13 +247,14 @@
         $menu.find('.pxl-primary-menu li').each(function () {
             var $submenu = $(this).find('> ul.sub-menu');
             if ($submenu.length == 1) {
-                $(this).on('hover', function () {
+                $(this).on('mouseover', function () {
                     if ($submenu.offset().left + $submenu.width() > $(window).width()) {
                         $submenu.addClass('back');
                     } else if ($submenu.offset().left < 0) {
                         $submenu.addClass('back');
                     }
-                }, function () {
+                });
+                $(this).on('mouseleave', function () {
                     $submenu.removeClass('back');
                 });
             }

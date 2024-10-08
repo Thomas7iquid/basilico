@@ -3,6 +3,8 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+
+    'use strict';
     var PXLCountdownHandler = function( $scope, $ ) {
         $scope.find(".pxl-countdown").each(function(){
             if ($('.pxl-countdown-container').length > 0) {

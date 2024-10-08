@@ -114,12 +114,12 @@ select.orderby{
 	color: $primary_color;
 	padding: 4px 18px;
 	z-index: 2;
-	min-height: 40px;
 	min-width: 120px;
-	line-height: 20px;
+	line-height: 32px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: opacity 0.2s linear;
 }
 
 .pxl-featured + .onsale {
@@ -392,7 +392,8 @@ select.orderby{
 		}
 		.pxl-product-title {
 			font-size: 20px;
-			font-weight: 500;
+			line-height: 1.4;
+			font-weight: 700;
 			margin-bottom: 10px;
 			text-transform: uppercase;
 			a {
@@ -487,6 +488,9 @@ select.orderby{
 	.pxl-products-content-list-view {
 		.pxl-btn.button {
 			border: 1px solid $secondary_color;
+			i, .pxl-button-icon, .pxl-icon {
+				transition: color 0.3s linear;
+			}
 			&:before {
 				content: '';
 				position: absolute;
@@ -499,7 +503,7 @@ select.orderby{
 			}
 			&:hover {
 				color: $heading_color;
-				i, .pxl-button-icon {
+				i, .pxl-button-icon, .pxl-icon {
 					color: $heading_color;
 				}
 				&:before {

@@ -1,5 +1,6 @@
 ( function( $ ) {
     // Make sure you run this code under Elementor.
+    'use strict';
     if( typeof Swiper == 'undefined') return;
     $(window).on("elementor/frontend/init", function () {
         elementorFrontend.hooks.addAction("frontend/element_ready/pxl_team_carousel.default", function($scope) {
@@ -47,7 +48,6 @@
         pxl_swiper_handler( $('.product-loop-carousel') );
         pxl_swiper_handler( $('.pxl-product-swiper-slider') );
         pxl_swiper_handler( $('.pxl-product-loop-carousel .pxl-product-carousel') );
-
     });
 
     $(document).ajaxComplete(function(event, xhr, settings){  

@@ -44,7 +44,12 @@ if (!class_exists('Basilico_Page_Title')) {
                     <div class="container relative">
                         <div class="pxl-page-title-inner text-center">
                             <div class="pxl-page-title col-12">
-                                <h1 class="main-title"><?php pxl_print_html($titles['title']) ?></h1>
+                                <h1 class="main-title"><?php
+                                    if (function_exists('pxl_print_html'))
+                                        pxl_print_html($titles['title']);
+                                    else
+                                        echo esc_html($titles['title']);
+                                ?></h1>
                             </div>
                             <?php if ( !empty( $entries ) && $breadcrumb_on ): ?>
                                 <div class="pxl-breadcrumb hover-underline">

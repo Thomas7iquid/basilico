@@ -3,6 +3,7 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+    'use strict';
     var PXLCounterHandler = function( $scope, $ ) {
         setTimeout(function(){
             elementorFrontend.waypoint($scope.find('.pxl-counter-number-value'), function () {
@@ -10,7 +11,7 @@
                     data = $number.data();
                 var el = $number[0];
                 var startNumber = data['startnumber'], endNumber = data['endnumber'], separator = data['delimiter'], duration = data['duration'] ;
-                od = new Odometer({
+                var od = new Odometer({
                     el: el,
                     value: startNumber,
                     format: separator,

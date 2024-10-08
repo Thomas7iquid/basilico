@@ -3,6 +3,8 @@
      * @param $scope The Widget wrapper element as a jQuery element
      * @param $ The jQuery alias
      */
+
+    'use strict';
     function sep_grid_refresh($scope){
         $scope.find('.pxl-grid-masonry').each(function () {
             var iso = new Isotope(this, {
