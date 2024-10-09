@@ -430,6 +430,7 @@
         font-weight: 600;
         letter-spacing: 0.065em;
         border: none;
+        height: $input_height;
         .pxl-button-icon {
             color: #fff;
             margin-bottom: -2px;
@@ -496,7 +497,6 @@
     &.btn-additional-8 {
         font-family: $heading_font_family;
         background-color: $primary_color;
-        height: $input_height;
         height: $input_height;
         font-size: 15px;
         font-weight: 600;

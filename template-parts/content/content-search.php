@@ -2,6 +2,9 @@
 /**
  * @package Basilico
  */
+
+$archive_style = basilico()->get_theme_opt('archive_post_layout', 'layout-1');
+
 $archive_readmore = basilico()->get_theme_opt('archive_readmore', '0');
 $archive_readmore_btn_style = basilico()->get_theme_opt('archive_readmore_button_style', 'btn_outline_secondary');
 $archive_readmore_text = basilico()->get_theme_opt( 'archive_readmore_text', esc_html__('Read more', 'basilico') );
@@ -9,7 +12,10 @@ $archive_readmore_text = basilico()->get_theme_opt( 'archive_readmore_text', esc
 <article id="post-<?php the_ID(); ?>" <?php post_class('pxl-archive-post search-results-post'); ?>>
     <div class="post-content">
         <?php
-        basilico()->blog->get_archive_meta();
+        if ($archive_style == 'layout-2')
+            basilico()->blog->get_archive_meta_luxury();
+        else
+            basilico()->blog->get_archive_meta();
         ?>
         <h3 class="post-title">
             <a href="<?php echo esc_url( get_permalink()); ?>" title="<?php the_title_attribute(); ?>">

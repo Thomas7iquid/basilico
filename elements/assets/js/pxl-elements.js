@@ -53,10 +53,26 @@
             }
         });
         elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-left'), function () {
-            $(this).addClass('pxl-animated');
+            var $el = $(this),
+                data = $el.data('settings');
+            if(typeof data != 'undefined'){
+                setTimeout(function () {
+                    $el.addClass('pxl-animated');
+                }, data['animation_delay']);
+            }else{
+                $el.addClass('pxl-animated');
+            }
         });
         elementorFrontend.waypoint($scope.find('.pxl-image-wg.draw-from-right'), function () {
-            $(this).addClass('pxl-animated');
+            var $el = $(this),
+                data = $el.data('settings');
+            if(typeof data != 'undefined'){
+                setTimeout(function () {
+                    $el.addClass('pxl-animated');
+                }, data['animation_delay']);
+            }else{
+                $el.addClass('pxl-animated');
+            }
         });
         elementorFrontend.waypoint($scope.find('.pxl-image-wg.move-from-left'), function () {
             $(this).addClass('pxl-animated');

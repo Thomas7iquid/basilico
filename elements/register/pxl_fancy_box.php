@@ -60,8 +60,12 @@ pxl_add_custom_widget(
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-10.jpg'
                                 ],
                                 '11' => [
-                                    'label' => esc_html__( 'Layout 10', 'basilico' ),
+                                    'label' => esc_html__( 'Layout 11', 'basilico' ),
                                     'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-11.jpg'
+                                ],
+                                '12' => [
+                                    'label' => esc_html__( 'Layout 12', 'basilico' ),
+                                    'image' => get_template_directory_uri() . '/elements/assets/layout-image/pxl_fancy_box-12.jpg'
                                 ],
                             ]
                         )
@@ -222,7 +226,7 @@ pxl_add_custom_widget(
                             'type' => \Elementor\Controls_Manager::TEXT,
                             'label_block' => true,
                             'condition' => [
-                                'layout'    => ['2', '9']
+                                'layout'    => ['2', '9', '12']
                             ]
                         ),
                         array(
@@ -235,7 +239,7 @@ pxl_add_custom_widget(
                                 'is_external' => 'on'
                             ],
                             'condition' => [
-                                'layout' => ['2', '5', '6', '7', '9']
+                                'layout' => ['2', '5', '6', '7', '9', '12']
                             ],
                         ),
                     )
@@ -419,7 +423,7 @@ pxl_add_custom_widget(
                                 'btn-outline-secondary' => esc_html__('Out Line Secondary', 'basilico' ),
                             ],
                             'condition' => [
-                                'layout'    => ['2', '9']
+                                'layout'    => ['2']
                             ]
                         ),
                         array(
@@ -476,7 +480,7 @@ pxl_add_custom_widget(
                                 '{{WRAPPER}} .pxl-fancy-box .box-readmore' => 'color: {{VALUE}};',
                             ],
                             'condition' => [
-                                'layout'    => ['9']
+                                'layout'    => ['9', '12']
                             ]
                         ),
                         array(
@@ -486,8 +490,7 @@ pxl_add_custom_widget(
                             'control_type' => 'group',
                             'selector' => '{{WRAPPER}} .pxl-fancy-box .box-readmore',
                             'condition' => [
-                                'layout'    => ['9'],
-                                'layout!'    => ['10']
+                                'layout'    => ['9', '12'],
                             ]
                         ),
                     ),

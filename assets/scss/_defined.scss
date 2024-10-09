@@ -1675,3 +1675,36 @@
 		}
 	}
 }
+
+.image-carousel-scale-hover {
+	.swiper-slide-inner {
+		overflow: hidden;
+		img {
+			@include transition(0.55s cubic-bezier(0.37, 0.65, 0.38, 0.94));
+			transform: scale(1.01);
+			transform-origin: 90% 70%;
+		}
+		&:hover {
+			img {
+				-webkit-transform: scale3d(1.03, 1.03, 1);
+				transform: scale3d(1.03, 1.03, 1);
+				transition-duration: 0.73s;
+			}
+		}
+	}
+}
+
+.heading-change-color-animation {
+	a {
+		animation: heading-change-color-animation 1s linear infinite;
+	}
+}
+
+@keyframes heading-change-color-animation {
+	from {
+		color: $primary_color;
+	}
+	50% {
+		color: $secondary_color;
+	}
+}
